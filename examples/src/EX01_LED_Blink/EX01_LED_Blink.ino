@@ -23,7 +23,11 @@
 */
 
 const int RED_LED=7;  // RED LED assigned to the 7 pin
-const int DELAY_TIME=1000; // Int constant to define delay time
+const int YELLOW_LED=6;  // 
+const int GREEN_LED=5;  // 
+const int DELAY_ON_RED_LED=1000; // Int constant to define delay time
+const int DELAY_ON_YELLOW_LED=300; // Int constant to define delay time
+const int DELAY_TIME = DELAY_ON_RED_LED-DELAY_ON_YELLOW_LED;
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -35,6 +39,14 @@ void setup() {
 void loop() {
   digitalWrite(RED_LED, HIGH);   // turn the LED on (HIGH is the voltage level)
   delay(DELAY_TIME);                       // wait for a second
+  digitalWrite(YELLOW_LED, HIGH);
+  delay(DELAY_ON_YELLOW_LED);                       // wait for a second
   digitalWrite(RED_LED, LOW);    // turn the LED off by making the voltage LOW
-  delay(DELAY_TIME);                       // wait for a second
+  digitalWrite(YELLOW_LED, LOW);    // turn the LED off by making the voltage LOW
+  digitalWrite(GREEN_LED, HIGH);
+  delay(DELAY_TIME);
+  digitalWrite(GREEN_LED, LOW);
+  digitalWrite(YELLOW_LED, HIGH);
+  delay(DELAY_ON_YELLOW_LED);
+  digitalWrite(YELLOW_LED, LOW);
 }
