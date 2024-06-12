@@ -33,20 +33,28 @@ const int DELAY_TIME = DELAY_ON_RED_LED-DELAY_ON_YELLOW_LED;
 void setup() {
   // initialize digital pin LED_BUILTIN as an output.
   pinMode(RED_LED, OUTPUT);
+  Serial.begin(9600);
+  Serial.println();
+  Serial.println("Start sequence");
+  
 }
 
 // the loop function runs over and over again forever
 void loop() {
   digitalWrite(RED_LED, HIGH);   // turn the LED on (HIGH is the voltage level)
+  Serial.println("Red LED ON");
   delay(DELAY_TIME);                       // wait for a second
   digitalWrite(YELLOW_LED, HIGH);
+  Serial.println("Yellow LED ON");
   delay(DELAY_ON_YELLOW_LED);                       // wait for a second
   digitalWrite(RED_LED, LOW);    // turn the LED off by making the voltage LOW
   digitalWrite(YELLOW_LED, LOW);    // turn the LED off by making the voltage LOW
   digitalWrite(GREEN_LED, HIGH);
+  Serial.println("Green LED ON");
   delay(DELAY_TIME);
   digitalWrite(GREEN_LED, LOW);
   digitalWrite(YELLOW_LED, HIGH);
+  Serial.println("Yellow LED ON");
   delay(DELAY_ON_YELLOW_LED);
   digitalWrite(YELLOW_LED, LOW);
 }
