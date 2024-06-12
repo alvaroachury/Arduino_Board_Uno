@@ -23,6 +23,7 @@
 */
 
 const int RED_LED=7;  // RED LED assigned to the 7 pin
+const int DELAY_TIME=1000; // Int constant to define delay time
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -33,7 +34,7 @@ void setup() {
 // the loop function runs over and over again forever
 void loop() {
   digitalWrite(RED_LED, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);                       // wait for a second
+  delay(DELAY_TIME);                       // wait for a second
   digitalWrite(RED_LED, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);                       // wait for a second
+  delay(DELAY_TIME);                       // wait for a second
 }
