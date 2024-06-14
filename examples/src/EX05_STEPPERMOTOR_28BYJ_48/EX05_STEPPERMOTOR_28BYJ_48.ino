@@ -16,7 +16,7 @@ const int IN_1 = 4;  //
 const int IN_2 = 5;  // 
 const int IN_3 = 6;  // 
 const int IN_4 = 7; 
-const int DELAY_TIME = 100; // Int constant to define delay time
+const int DELAY_TIME = 10; // Int constant to define delay time
 
 // the setup function runs once when you press reset or power the board
 void setup() {
@@ -29,39 +29,83 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
+  // one phases sequence
   digitalWrite(IN_1, HIGH);   
-  digitalWrite(IN_2, HIGH);   
+  digitalWrite(IN_2, LOW);   
   digitalWrite(IN_3, LOW);   
   digitalWrite(IN_4, LOW);
   delay(DELAY_TIME);
   digitalWrite(IN_1, LOW);   
   digitalWrite(IN_2, HIGH);   
-  digitalWrite(IN_3, HIGH);   
+  digitalWrite(IN_3, LOW);   
   digitalWrite(IN_4, LOW);
   delay(DELAY_TIME);
   digitalWrite(IN_1, LOW);   
   digitalWrite(IN_2, LOW);   
   digitalWrite(IN_3, HIGH);   
-  digitalWrite(IN_4, HIGH);
+  digitalWrite(IN_4, LOW);
   delay(DELAY_TIME);
-  digitalWrite(IN_1, HIGH);   
+  digitalWrite(IN_1, LOW);   
   digitalWrite(IN_2, LOW);   
   digitalWrite(IN_3, LOW);   
   digitalWrite(IN_4, HIGH);
   delay(DELAY_TIME);
 
+  // two phases sequence
   // digitalWrite(IN_1, HIGH);   
+  // digitalWrite(IN_2, HIGH);   
+  // digitalWrite(IN_3, LOW);   
+  // digitalWrite(IN_4, LOW);
+  // delay(DELAY_TIME);
+  // digitalWrite(IN_1, LOW);   
+  // digitalWrite(IN_2, HIGH);   
+  // digitalWrite(IN_3, HIGH);   
+  // digitalWrite(IN_4, LOW);
+  // delay(DELAY_TIME);
+  // digitalWrite(IN_1, LOW);   
+  // digitalWrite(IN_2, LOW);   
+  // digitalWrite(IN_3, HIGH);   
+  // digitalWrite(IN_4, HIGH);
+  // delay(DELAY_TIME);
+  // digitalWrite(IN_1, HIGH);   
+  // digitalWrite(IN_2, LOW);   
+  // digitalWrite(IN_3, LOW);   
+  // digitalWrite(IN_4, HIGH);
+  // delay(DELAY_TIME);
+
+  // half step sequence
+  // digitalWrite(IN_1, HIGH);   
+  // digitalWrite(IN_2, LOW);   
+  // digitalWrite(IN_3, LOW);   
+  // digitalWrite(IN_4, LOW);
+  // delay(DELAY_TIME);
+  // digitalWrite(IN_1, HIGH);   
+  // digitalWrite(IN_2, HIGH);   
+  // digitalWrite(IN_3, LOW);   
+  // digitalWrite(IN_4, LOW);
+  // delay(DELAY_TIME);
+  // digitalWrite(IN_1, LOW);   
+  // digitalWrite(IN_2, HIGH);   
+  // digitalWrite(IN_3, LOW);   
+  // digitalWrite(IN_4, LOW);
+  // delay(DELAY_TIME);
+  // digitalWrite(IN_1, LOW);   
+  // digitalWrite(IN_2, HIGH);   
+  // digitalWrite(IN_3, HIGH);   
+  // digitalWrite(IN_4, LOW);
+  // delay(DELAY_TIME);
+  // digitalWrite(IN_1, LOW);   
   // digitalWrite(IN_2, LOW);   
   // digitalWrite(IN_3, HIGH);   
   // digitalWrite(IN_4, LOW);
   // delay(DELAY_TIME);
   // digitalWrite(IN_1, LOW);   
-  // digitalWrite(IN_2, HIGH);   
+  // digitalWrite(IN_2, LOW);   
   // digitalWrite(IN_3, HIGH);   
-  // digitalWrite(IN_4, LOW);
+  // digitalWrite(IN_4, HIGH);
   // delay(DELAY_TIME);
   // digitalWrite(IN_1, LOW);   
-  // digitalWrite(IN_2, HIGH);   
+  // digitalWrite(IN_2, LOW);   
   // digitalWrite(IN_3, LOW);   
   // digitalWrite(IN_4, HIGH);
   // delay(DELAY_TIME);
